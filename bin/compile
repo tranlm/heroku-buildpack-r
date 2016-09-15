@@ -68,6 +68,7 @@ curl $R_BINARIES -s -o - | tar xzf - -C $BUILD_DIR
 
 # need to copy the binaries to /app/vendor so that R works when compiling packages
 
+echo "Copying R binaries for compiling" | indent
 mkdir -p /app/.apt
 cp -R $VENDOR_DIR/.apt/* /app/.apt
 
