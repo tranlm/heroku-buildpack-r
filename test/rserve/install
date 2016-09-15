@@ -13,8 +13,13 @@ git commit -m "initial"
 
 heroku create --stack cedar-14 --buildpack https://github.com/virtualstaticvoid/heroku-buildpack-r.git#cedar-14
 
+<<<<<<< HEAD
 app=`heroku apps:info -s | grep ^git-url=`
 app=${app:31:-4}  # git-url=https://git.heroku.com/app-name-number.git
+=======
+app=`heroku apps:info -s | grep ^name=`
+app=${app:5}
+>>>>>>> e3f97806d5ba91475a775c2a32b8766df0b2560f
 
 git push heroku master
 
@@ -26,6 +31,7 @@ sleep 60
 # check
 heroku logs --app $app
 
+<<<<<<< HEAD
 # run the ruby client app, passing in the host name (assuming Ruby installed)
 bundle install
 bundle exec ruby ./client.rb $app.herokuapp.com
@@ -35,6 +41,8 @@ bundle exec ruby ./client.rb $app.herokuapp.com
 pip install -r requirements.txt
 python ./client.py $app.herokuapp.com
 
+=======
+>>>>>>> e3f97806d5ba91475a775c2a32b8766df0b2560f
 popd
 
 # clean up

@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 web: bundle exec thin start -R config.ru -e ${RACK_ENV:-development} -p ${PORT:-3030}
+=======
+web: bundle exec thin start -R config.ru -e $RACK_ENV -p $PORT
+>>>>>>> e3f97806d5ba91475a775c2a32b8766df0b2560f

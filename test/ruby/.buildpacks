@@ -1,3 +1,8 @@
+<<<<<<< HEAD
 https://github.com/heroku/heroku-buildpack-ruby.git
 https://github.com/virtualstaticvoid/heroku-buildpack-r.git#cedar-14
 
+=======
+https://github.com/virtualstaticvoid/heroku-buildpack-r.git#cedar-14
+https://github.com/heroku/heroku-buildpack-ruby.git
+>>>>>>> e3f97806d5ba91475a775c2a32b8766df0b2560f

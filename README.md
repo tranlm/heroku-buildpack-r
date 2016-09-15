@@ -69,6 +69,7 @@ Type `q()` to exit the console when you are finished.
 
 _Note that the Heroku slug is read-only, so any changes you make during the session will be discarded._
 
+<<<<<<< HEAD
 ## Scheduling a recurring job
 You can use the [Heroku scheduler](https://addons.heroku.com/scheduler) to schedule a recurring R process.
 
@@ -79,6 +80,11 @@ The following command would run `prog.r`:
 ## Using in your applications
 This buildpack can be used in conjunction with other supported language stacks on Heroku by
 using multiple buildpacks. See [Using Multiple Buildpacks for an App](https://devcenter.heroku.com/articles/using-multiple-buildpacks-for-an-app).
+=======
+## Using in your applications
+This buildpack can be used in conjunction with other supported language stacks on Heroku by
+using the [heroku-buildpack-multi](https://github.com/ddollar/heroku-buildpack-multi) buildpack.
+>>>>>>> e3f97806d5ba91475a775c2a32b8766df0b2560f
 
 See the example [test applications](test) which show how to use R from the console and various other examples.
 
@@ -87,6 +93,7 @@ The binaries used by the buildpack are hosted on AWS S3 at [s3://heroku-buildpac
 
 See the [heroku-buildpack-r-build](https://github.com/virtualstaticvoid/heroku-buildpack-r-build) repository for building the R binaries yourself.
 
+<<<<<<< HEAD
 ## R Versions
 Optionally, the R version and buildpack version can be configured by providing a `.r-version` and `.r-buildpack-version` file in the root directory.
 These files should contain 1 line of text containing the respective version. See [alternate-versions](https://github.com/virtualstaticvoid/heroku-buildpack-r/tree/cedar-14/test/alternate-versions) for an example.
@@ -119,6 +126,8 @@ NB: Remember to use the `http://github.com/virtualstaticvoid/heroku-buildpack-r.
 
 NB: Remember to use the `http://github.com/virtualstaticvoid/heroku-buildpack-r.git#cedar-14` branch for the buildpack URL.
 
+=======
+>>>>>>> e3f97806d5ba91475a775c2a32b8766df0b2560f
 ## Caveats
 Due to the size of the R runtime, the slug size on Heroku, without any additional packages or program code, is approximately 90Mb.
 If additional R packages are installed by the `init.r` script then the slug size will increase.

@@ -11,6 +11,7 @@ git init
 git add --all
 git commit -m "initial"
 
+<<<<<<< HEAD
 heroku create --stack cedar-14
 
 app=`heroku apps:info -s | grep ^git-url=`
@@ -18,6 +19,12 @@ app=${app:31:-4}  # git-url=https://git.heroku.com/app-name-number.git
 
 heroku buildpacks:add https://github.com/heroku/heroku-buildpack-ruby.git --app $app
 heroku buildpacks:add https://github.com/virtualstaticvoid/heroku-buildpack-r.git#cedar-14 --app $app
+=======
+heroku create --stack cedar-14 --buildpack https://github.com/ddollar/heroku-buildpack-multi.git
+
+app=`heroku apps:info -s | grep ^name=`
+app=${app:5}
+>>>>>>> e3f97806d5ba91475a775c2a32b8766df0b2560f
 
 git push heroku master
 
@@ -26,10 +33,13 @@ sleep 60
 # check...
 heroku logs --app $app
 
+<<<<<<< HEAD
 echo ----------------------------------------------------------------------
 curl http://$app.herokuapp.com
 echo ----------------------------------------------------------------------
 
+=======
+>>>>>>> e3f97806d5ba91475a775c2a32b8766df0b2560f
 popd
 
 # clean up

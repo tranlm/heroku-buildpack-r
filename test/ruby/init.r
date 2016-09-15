@@ -6,7 +6,11 @@
 ###########################################################
 # Update this line with the R packages to install:
 
+<<<<<<< HEAD
 my_packages = c("jsonlite")
+=======
+my_packages = c("nlme")
+>>>>>>> e3f97806d5ba91475a775c2a32b8766df0b2560f
 
 ###########################################################
 
