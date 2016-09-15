@@ -66,7 +66,12 @@ CRAN_MIRROR="http://cran.revolutionanalytics.com"
 
 mkdir -p $CACHE_DIR
 
-# vendor R into the slug
+# Dependencies
+apt-get update -y
+apt-get install mesa-common-dev parallel gfortran libblas-dev liblapack-dev -y
+export LD_LIBRARY_PATH="/usr/lib:/usr/lib/libblas:/usr/lib/lapack/:$LD_LIBRARY_PATH"
+
+ #vendor R into the slug
 echo "Vendoring R $R_VERSION for $STACK stack ($BUILD_PACK_VERSION)" | indent
 
 # download and unpack binaries
